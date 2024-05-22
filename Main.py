@@ -25,6 +25,7 @@ selected_processor = st.multiselect('Select Processor options:', processor_optio
 selected_display_size = st.multiselect('Select Display Size options:', display_size_options)
 selected_price = st.slider('Select Price Range ($):', price_range[0], price_range[1], (price_range[0], price_range[1]))
 selected_rating = st.slider('Select Minimum Rating:', *rating_range, step=1)
+prompt = st.text_area('Or Write Prompt:')
 
 st.write('You selected the following options:')
 st.write('**RAM:**', selected_ram)
@@ -34,6 +35,7 @@ st.write('**Processor:**', selected_processor)
 st.write('**Display Size:**', selected_display_size)
 st.write('**Price Range: $**', selected_price)
 st.write('**Minimum Rating:**', selected_rating)
+
 
 def get_recommendations(ram, storage, camera, processor, display_size, price, rating):
     recommendations = [
