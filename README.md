@@ -141,11 +141,12 @@ if recommendations:
         st.write('---')
 else:
     st.write("No smartphones match your criteria.")
+```
 
-#Contributing
+## Contributing
 Contributions are welcome! Please fork this repository and submit a pull request for any improvements or additions.
 
-#License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ### Notes:
