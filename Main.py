@@ -18,7 +18,8 @@ DISPLAY_SIZE_OPTIONS = ['5.0"', '5.5"', '6.0"', '6.5"', '6.7"', '6.9"']
 PRICE_RANGE = (10000, 300000)
 
 st.title("Phone Buddy")
-st.caption("Let's get the best phone suggestion for you")
+st.caption('''This application takes user requirements as input and provides recommendations for the two best smartphones that meet their criteria.
+Let's find the ideal smartphone for you.''')
 st.code('''
 def PhoneBuddy(product):
     if product == "Best":
@@ -39,7 +40,7 @@ prompt = st.text_area('Or Write your requirements in text:')
 
 if st.button('Suggest'):
     sample_prompt = generate_prompt(selected_ram, selected_storage, selected_camera, selected_processor, selected_display_size, selected_price, selected_company, selected_battery, prompt)
-    st.write(sample_prompt)
+    # st.write(sample_prompt)
     asyncio.run(run_agent(sample_prompt, get_groq_api_key()))
     if 'groq_response' in st.session_state:
         st.write('### Top 2 Suggestions:')
