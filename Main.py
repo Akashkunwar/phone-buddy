@@ -115,7 +115,7 @@ def generate_prompt(ram, storage, camera, processor, display_size, price, compan
     return prompt_text
 
 async def run_agent(prompt):
-    groq_api_key = os.getenv('groq_api_key')x
+    groq_api_key = os.getenv('groq_api_key')
 
     class QueryRequest(Model):
         query: str
