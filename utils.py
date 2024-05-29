@@ -3,11 +3,11 @@ def generate_prompt(ram, storage, camera, processor, display_size, price, compan
     if ram:
         parts.append(f"ram - {', '.join(ram)}")
     if storage:
-        parts.append(f"rom - {', '.join(storage)}")
+        parts.append(f"storage - {', '.join(storage)}")
     if battery:
-        parts.append(f"rom - {', '.join(battery)}")
+        parts.append(f"battery - {', '.join(battery)}")
     if camera:
-        parts.append(f"front camera - {camera[0] if camera else ''}, back camera - {camera[-1] if camera else ''}")
+        parts.append(f"camera - {', '.join(camera)}")
     if display_size:
         parts.append(f"screen size - {', '.join(display_size)}")
     if processor:
@@ -15,7 +15,7 @@ def generate_prompt(ram, storage, camera, processor, display_size, price, compan
     if company:
         parts.append(f"company - {', '.join(company)}")
     if price:
-        parts.append(f"under price {price[1]} INR")
+        parts.append(f"between price {price[0]} and {price[1]} INR")
     prompt_text = ", ".join(parts)
-    prompt_text += f" {prompt}. Output results in json with phone name being primary key and specs being nested key: value pair. Make sure to include price in INR"
+    prompt_text += f" {prompt}. Output results in json with phone name being primary key and correct specs of the phone your are suggesting being nested key: value pair. Make sure to include price in INR"
     return prompt_text
