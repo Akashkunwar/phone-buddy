@@ -13,6 +13,9 @@ Welcome to Phone Buddy! This application helps you find the best smartphone base
 - **Write Prompt**: Optionally, provide additional details or preferences in a text area.
 - **Get Recommendations**: The app filters and displays smartphones that match your criteria.
 
+## Streamlit deployed link
+- You can check out our app from streamlit [here](https://phone-buddy.streamlit.app/)
+
 ## Installation
 
 To run this application locally, follow these steps:
