@@ -53,3 +53,6 @@ if st.button('Suggest'):
                 st.markdown("---")
         except json.JSONDecodeError:
             st.write(st.session_state['groq_response'])
+
+url = "https://github.com/Akashkunwar/phone-buddy"
+st.write("Check out phone buddy [github repository](%s)" % url)
